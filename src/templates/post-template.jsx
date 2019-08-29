@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Sidebar from '../components/Sidebar'
 import PostTemplateDetails from '../components/PostTemplateDetails'
 
 class PostTemplate extends React.Component {
@@ -18,7 +19,12 @@ class PostTemplate extends React.Component {
             <title>{`${postTitle} - ${title}`}</title>
             <meta name="description" content={description} />
           </Helmet>
-          <PostTemplateDetails {...this.props} />
+          <Sidebar {...this.props} />
+          <div className="content">
+            <div className="content__inner">
+              <PostTemplateDetails {...this.props} />
+            </div>
+          </div>
         </div>
       </Layout>
     )

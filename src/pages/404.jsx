@@ -36,18 +36,11 @@ export const pageQuery = graphql`
         title
         subtitle
         copyright
-        menu {
-          label
-          path
-        }
         author {
           name
           email
-          telegram
           twitter
           github
-          rss
-          vk
         }
       }
     }
